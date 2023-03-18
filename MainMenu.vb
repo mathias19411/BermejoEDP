@@ -22,6 +22,7 @@
 
     Private Sub exitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
         Me.Close()
+        Application.Exit()
     End Sub
 
     Private Sub mainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load

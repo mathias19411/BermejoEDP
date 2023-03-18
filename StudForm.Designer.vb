@@ -23,8 +23,6 @@ Partial Class Student_Form
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.backButton = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -35,18 +33,22 @@ Partial Class Student_Form
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.CourseNo_TextBox10 = New System.Windows.Forms.TextBox()
+        Me.OrgNo_TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Tuition_TextBox8 = New System.Windows.Forms.TextBox()
+        Me.ClubNo_TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Address_TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Email_TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Birthday_TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Stud_IDTextBox3 = New System.Windows.Forms.TextBox()
+        Me.LastName_TextBox2 = New System.Windows.Forms.TextBox()
         Me.firstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.Add_Stud_Button = New System.Windows.Forms.Button()
+        Me.backButton = New System.Windows.Forms.Button()
         Me.loadStudentsButton = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Update_Stud_Button = New System.Windows.Forms.Button()
+        Me.Delete_Stud_Button = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,8 +56,6 @@ Partial Class Student_Form
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.backButton)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -66,40 +66,20 @@ Partial Class Student_Form
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox10)
-        Me.Panel1.Controls.Add(Me.TextBox9)
-        Me.Panel1.Controls.Add(Me.TextBox8)
-        Me.Panel1.Controls.Add(Me.TextBox7)
-        Me.Panel1.Controls.Add(Me.TextBox6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.CourseNo_TextBox10)
+        Me.Panel1.Controls.Add(Me.OrgNo_TextBox9)
+        Me.Panel1.Controls.Add(Me.Tuition_TextBox8)
+        Me.Panel1.Controls.Add(Me.ClubNo_TextBox7)
+        Me.Panel1.Controls.Add(Me.Address_TextBox6)
+        Me.Panel1.Controls.Add(Me.Email_TextBox5)
+        Me.Panel1.Controls.Add(Me.Birthday_TextBox4)
+        Me.Panel1.Controls.Add(Me.Stud_IDTextBox3)
+        Me.Panel1.Controls.Add(Me.LastName_TextBox2)
         Me.Panel1.Controls.Add(Me.firstNameTextBox)
-        Me.Panel1.Location = New System.Drawing.Point(3, 1)
+        Me.Panel1.Location = New System.Drawing.Point(3, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(381, 453)
+        Me.Panel1.Size = New System.Drawing.Size(381, 527)
         Me.Panel1.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button2.Location = New System.Drawing.Point(198, 360)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 57)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Add Student"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'backButton
-        '
-        Me.backButton.BackColor = System.Drawing.SystemColors.Info
-        Me.backButton.Location = New System.Drawing.Point(12, 360)
-        Me.backButton.Name = "backButton"
-        Me.backButton.Size = New System.Drawing.Size(166, 57)
-        Me.backButton.TabIndex = 20
-        Me.backButton.Text = "Back"
-        Me.backButton.UseVisualStyleBackColor = False
         '
         'Label10
         '
@@ -191,68 +171,68 @@ Partial Class Student_Form
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "First Name"
         '
-        'TextBox10
+        'CourseNo_TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(9, 232)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox10.TabIndex = 9
+        Me.CourseNo_TextBox10.Location = New System.Drawing.Point(9, 232)
+        Me.CourseNo_TextBox10.Name = "CourseNo_TextBox10"
+        Me.CourseNo_TextBox10.Size = New System.Drawing.Size(100, 22)
+        Me.CourseNo_TextBox10.TabIndex = 9
         '
-        'TextBox9
+        'OrgNo_TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(9, 287)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox9.TabIndex = 8
+        Me.OrgNo_TextBox9.Location = New System.Drawing.Point(9, 287)
+        Me.OrgNo_TextBox9.Name = "OrgNo_TextBox9"
+        Me.OrgNo_TextBox9.Size = New System.Drawing.Size(100, 22)
+        Me.OrgNo_TextBox9.TabIndex = 8
         '
-        'TextBox8
+        'Tuition_TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(211, 287)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox8.TabIndex = 7
+        Me.Tuition_TextBox8.Location = New System.Drawing.Point(211, 287)
+        Me.Tuition_TextBox8.Name = "Tuition_TextBox8"
+        Me.Tuition_TextBox8.Size = New System.Drawing.Size(100, 22)
+        Me.Tuition_TextBox8.TabIndex = 7
         '
-        'TextBox7
+        'ClubNo_TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(211, 232)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox7.TabIndex = 6
+        Me.ClubNo_TextBox7.Location = New System.Drawing.Point(211, 232)
+        Me.ClubNo_TextBox7.Name = "ClubNo_TextBox7"
+        Me.ClubNo_TextBox7.Size = New System.Drawing.Size(100, 22)
+        Me.ClubNo_TextBox7.TabIndex = 6
         '
-        'TextBox6
+        'Address_TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(9, 176)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(352, 22)
-        Me.TextBox6.TabIndex = 5
+        Me.Address_TextBox6.Location = New System.Drawing.Point(9, 176)
+        Me.Address_TextBox6.Name = "Address_TextBox6"
+        Me.Address_TextBox6.Size = New System.Drawing.Size(352, 22)
+        Me.Address_TextBox6.TabIndex = 5
         '
-        'TextBox5
+        'Email_TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(9, 129)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(352, 22)
-        Me.TextBox5.TabIndex = 4
+        Me.Email_TextBox5.Location = New System.Drawing.Point(9, 129)
+        Me.Email_TextBox5.Name = "Email_TextBox5"
+        Me.Email_TextBox5.Size = New System.Drawing.Size(352, 22)
+        Me.Email_TextBox5.TabIndex = 4
         '
-        'TextBox4
+        'Birthday_TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(211, 80)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(150, 22)
-        Me.TextBox4.TabIndex = 3
+        Me.Birthday_TextBox4.Location = New System.Drawing.Point(211, 80)
+        Me.Birthday_TextBox4.Name = "Birthday_TextBox4"
+        Me.Birthday_TextBox4.Size = New System.Drawing.Size(150, 22)
+        Me.Birthday_TextBox4.TabIndex = 3
         '
-        'TextBox3
+        'Stud_IDTextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(9, 80)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(184, 22)
-        Me.TextBox3.TabIndex = 2
+        Me.Stud_IDTextBox3.Location = New System.Drawing.Point(9, 80)
+        Me.Stud_IDTextBox3.Name = "Stud_IDTextBox3"
+        Me.Stud_IDTextBox3.Size = New System.Drawing.Size(184, 22)
+        Me.Stud_IDTextBox3.TabIndex = 2
         '
-        'TextBox2
+        'LastName_TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(211, 30)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(150, 22)
-        Me.TextBox2.TabIndex = 1
+        Me.LastName_TextBox2.Location = New System.Drawing.Point(211, 30)
+        Me.LastName_TextBox2.Name = "LastName_TextBox2"
+        Me.LastName_TextBox2.Size = New System.Drawing.Size(150, 22)
+        Me.LastName_TextBox2.TabIndex = 1
         '
         'firstNameTextBox
         '
@@ -261,12 +241,32 @@ Partial Class Student_Form
         Me.firstNameTextBox.Size = New System.Drawing.Size(184, 22)
         Me.firstNameTextBox.TabIndex = 0
         '
+        'Add_Stud_Button
+        '
+        Me.Add_Stud_Button.BackColor = System.Drawing.Color.LimeGreen
+        Me.Add_Stud_Button.Location = New System.Drawing.Point(390, 12)
+        Me.Add_Stud_Button.Name = "Add_Stud_Button"
+        Me.Add_Stud_Button.Size = New System.Drawing.Size(163, 57)
+        Me.Add_Stud_Button.TabIndex = 21
+        Me.Add_Stud_Button.Text = "Add Student"
+        Me.Add_Stud_Button.UseVisualStyleBackColor = False
+        '
+        'backButton
+        '
+        Me.backButton.BackColor = System.Drawing.Color.Gray
+        Me.backButton.Location = New System.Drawing.Point(390, 224)
+        Me.backButton.Name = "backButton"
+        Me.backButton.Size = New System.Drawing.Size(166, 57)
+        Me.backButton.TabIndex = 20
+        Me.backButton.Text = "Back"
+        Me.backButton.UseVisualStyleBackColor = False
+        '
         'loadStudentsButton
         '
         Me.loadStudentsButton.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.loadStudentsButton.Location = New System.Drawing.Point(390, 11)
+        Me.loadStudentsButton.Location = New System.Drawing.Point(559, 12)
         Me.loadStudentsButton.Name = "loadStudentsButton"
-        Me.loadStudentsButton.Size = New System.Drawing.Size(403, 42)
+        Me.loadStudentsButton.Size = New System.Drawing.Size(710, 42)
         Me.loadStudentsButton.TabIndex = 22
         Me.loadStudentsButton.Text = "Load Students"
         Me.loadStudentsButton.UseVisualStyleBackColor = False
@@ -275,18 +275,42 @@ Partial Class Student_Form
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(390, 61)
+        Me.DataGridView1.Location = New System.Drawing.Point(559, 61)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(403, 377)
+        Me.DataGridView1.Size = New System.Drawing.Size(710, 468)
         Me.DataGridView1.TabIndex = 23
+        '
+        'Update_Stud_Button
+        '
+        Me.Update_Stud_Button.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Update_Stud_Button.Location = New System.Drawing.Point(390, 81)
+        Me.Update_Stud_Button.Name = "Update_Stud_Button"
+        Me.Update_Stud_Button.Size = New System.Drawing.Size(163, 57)
+        Me.Update_Stud_Button.TabIndex = 24
+        Me.Update_Stud_Button.Text = "Update Student"
+        Me.Update_Stud_Button.UseVisualStyleBackColor = False
+        '
+        'Delete_Stud_Button
+        '
+        Me.Delete_Stud_Button.BackColor = System.Drawing.Color.Crimson
+        Me.Delete_Stud_Button.Location = New System.Drawing.Point(390, 153)
+        Me.Delete_Stud_Button.Name = "Delete_Stud_Button"
+        Me.Delete_Stud_Button.Size = New System.Drawing.Size(163, 57)
+        Me.Delete_Stud_Button.TabIndex = 25
+        Me.Delete_Stud_Button.Text = "Delete Student"
+        Me.Delete_Stud_Button.UseVisualStyleBackColor = False
         '
         'Student_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1281, 541)
+        Me.Controls.Add(Me.Delete_Stud_Button)
+        Me.Controls.Add(Me.Update_Stud_Button)
+        Me.Controls.Add(Me.backButton)
+        Me.Controls.Add(Me.Add_Stud_Button)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.loadStudentsButton)
         Me.Controls.Add(Me.Panel1)
@@ -309,20 +333,22 @@ Partial Class Student_Form
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents CourseNo_TextBox10 As TextBox
+    Friend WithEvents OrgNo_TextBox9 As TextBox
+    Friend WithEvents Tuition_TextBox8 As TextBox
+    Friend WithEvents ClubNo_TextBox7 As TextBox
+    Friend WithEvents Address_TextBox6 As TextBox
+    Friend WithEvents Email_TextBox5 As TextBox
+    Friend WithEvents Birthday_TextBox4 As TextBox
+    Friend WithEvents Stud_IDTextBox3 As TextBox
+    Friend WithEvents LastName_TextBox2 As TextBox
+    Friend WithEvents Add_Stud_Button As Button
     Friend WithEvents backButton As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents loadStudentsButton As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Update_Stud_Button As Button
+    Friend WithEvents Delete_Stud_Button As Button
 End Class
