@@ -46,4 +46,9 @@ Public Class LoginForm1
     Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub RegisterButton1_Click(sender As Object, e As EventArgs) Handles RegisterButton1.Click
+        Me.Hide()
+        SignUpForm.Show()
+    End Sub
 End Class

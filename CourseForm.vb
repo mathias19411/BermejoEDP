@@ -1,8 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Course_Form
 
-    Private Sub loadStudentsButton_Click(sender As Object, e As EventArgs) Handles loadCoursesButton.Click
+    Private Sub loadCoursesButton_Click(sender As Object, e As EventArgs) Handles loadCoursesButton.Click
         Me.DataGridView2.Rows.Clear()
+        Me.DataGridView2.Columns.Clear()
         DataGridView2.Columns.Add("Column1", "Course ID")
         DataGridView2.Columns.Add("Column2", "Course Name")
         Dim strSQL As String
@@ -24,16 +25,26 @@ Public Class Course_Form
         Disconnect_to_DB()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles backButton.Click
-        mainMenu.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles addCourseButton.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
 
     End Sub
+
+    Private Sub Course_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Add_Course_Button_Click(sender As Object, e As EventArgs) Handles Add_Course_Button.Click
+        Me.Hide()
+        AddCourseForm1.Show()
+    End Sub
+
+    Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
+        mainMenu.Show()
+        Me.Hide()
+    End Sub
+
 End Class

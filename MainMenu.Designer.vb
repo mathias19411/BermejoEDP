@@ -34,7 +34,7 @@ Partial Class mainMenu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Monospac821 BT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(251, 21)
+        Me.Label1.Location = New System.Drawing.Point(21, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(298, 24)
         Me.Label1.TabIndex = 9
@@ -42,54 +42,60 @@ Partial Class mainMenu
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(280, 276)
+        Me.Button4.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Button4.Location = New System.Drawing.Point(52, 276)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(246, 70)
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "Organizations"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(280, 200)
+        Me.Button3.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Button3.Location = New System.Drawing.Point(52, 200)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(246, 70)
         Me.Button3.TabIndex = 7
         Me.Button3.Text = "Clubs"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(280, 124)
+        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Button2.Location = New System.Drawing.Point(52, 124)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(246, 70)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Courses"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(280, 48)
+        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Button1.Location = New System.Drawing.Point(52, 48)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(246, 70)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Students"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'exitButton
         '
-        Me.exitButton.Location = New System.Drawing.Point(280, 370)
+        Me.exitButton.BackColor = System.Drawing.Color.IndianRed
+        Me.exitButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.exitButton.Location = New System.Drawing.Point(52, 389)
         Me.exitButton.Name = "exitButton"
         Me.exitButton.Size = New System.Drawing.Size(246, 49)
         Me.exitButton.TabIndex = 10
         Me.exitButton.Text = "Exit"
-        Me.exitButton.UseVisualStyleBackColor = True
+        Me.exitButton.UseVisualStyleBackColor = False
         '
         'mainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(357, 450)
         Me.Controls.Add(Me.exitButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)

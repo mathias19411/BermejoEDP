@@ -92,6 +92,24 @@
     <Compile Include="ClubForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddStudentForm1.Designer.vb">
+      <DependentUpon>AddStudentForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourseForm1.Designer.vb">
+      <DependentUpon>AddCourseForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourseForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.vb">
+      <DependentUpon>SignUpForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OrganizationForm.Designer.vb">
       <DependentUpon>OrganizationForm.vb</DependentUpon>
     </Compile>
@@ -141,8 +159,17 @@
     <EmbeddedResource Include="CourseForm.resx">
       <DependentUpon>CourseForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm1.resx">
+      <DependentUpon>AddStudentForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCourseForm1.resx">
+      <DependentUpon>AddCourseForm1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrganizationForm.resx">
       <DependentUpon>OrganizationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudForm.resx">
       <DependentUpon>StudForm.vb</DependentUpon>

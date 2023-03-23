@@ -38,6 +38,7 @@ Partial Class LoginForm1
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.OK = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
+        Me.RegisterButton1 = New System.Windows.Forms.Button()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,7 +73,7 @@ Partial Class LoginForm1
         '
         Me.UsernameTextBox.Location = New System.Drawing.Point(174, 44)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(220, 22)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(322, 22)
         Me.UsernameTextBox.TabIndex = 1
         '
         'PasswordTextBox
@@ -80,25 +81,41 @@ Partial Class LoginForm1
         Me.PasswordTextBox.Location = New System.Drawing.Point(174, 101)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(220, 22)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(322, 22)
         Me.PasswordTextBox.TabIndex = 3
         '
         'OK
         '
-        Me.OK.Location = New System.Drawing.Point(197, 161)
+        Me.OK.BackColor = System.Drawing.Color.DodgerBlue
+        Me.OK.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OK.Location = New System.Drawing.Point(191, 152)
         Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(94, 23)
+        Me.OK.Size = New System.Drawing.Size(94, 32)
         Me.OK.TabIndex = 4
-        Me.OK.Text = "&OK"
+        Me.OK.Text = "&Login"
+        Me.OK.UseVisualStyleBackColor = False
         '
         'Cancel
         '
+        Me.Cancel.BackColor = System.Drawing.Color.Crimson
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel.Location = New System.Drawing.Point(300, 161)
+        Me.Cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.Location = New System.Drawing.Point(402, 152)
         Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(94, 23)
+        Me.Cancel.Size = New System.Drawing.Size(94, 32)
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "&Cancel"
+        Me.Cancel.UseVisualStyleBackColor = False
+        '
+        'RegisterButton1
+        '
+        Me.RegisterButton1.BackColor = System.Drawing.Color.Lime
+        Me.RegisterButton1.Location = New System.Drawing.Point(297, 152)
+        Me.RegisterButton1.Name = "RegisterButton1"
+        Me.RegisterButton1.Size = New System.Drawing.Size(94, 32)
+        Me.RegisterButton1.TabIndex = 6
+        Me.RegisterButton1.Text = "Register"
+        Me.RegisterButton1.UseVisualStyleBackColor = False
         '
         'LoginForm1
         '
@@ -106,7 +123,8 @@ Partial Class LoginForm1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel
-        Me.ClientSize = New System.Drawing.Size(401, 192)
+        Me.ClientSize = New System.Drawing.Size(508, 197)
+        Me.Controls.Add(Me.RegisterButton1)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
         Me.Controls.Add(Me.PasswordTextBox)
@@ -114,17 +132,19 @@ Partial Class LoginForm1
         Me.Controls.Add(Me.PasswordLabel)
         Me.Controls.Add(Me.UsernameLabel)
         Me.Controls.Add(Me.LogoPictureBox)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "LoginForm1"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "LoginForm1"
+        Me.Text = "LoginForm"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents RegisterButton1 As Button
 End Class
