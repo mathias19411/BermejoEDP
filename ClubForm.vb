@@ -33,4 +33,13 @@ Public Class Club_Form
         mainMenu.Show()
         Me.Hide()
     End Sub
+
+    Private Sub firstNameTextBox_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub addClubButton_Click(sender As Object, e As EventArgs) Handles addClubButton.Click
+        Me.Hide()
+        AddClubForm.Show()
+    End Sub
 End Class

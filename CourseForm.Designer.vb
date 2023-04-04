@@ -59,7 +59,7 @@ Partial Class Course_Form
         Me.Delete_Course_Button.Name = "Delete_Course_Button"
         Me.Delete_Course_Button.Size = New System.Drawing.Size(163, 57)
         Me.Delete_Course_Button.TabIndex = 31
-        Me.Delete_Course_Button.Text = "Delete Student"
+        Me.Delete_Course_Button.Text = "Delete Course"
         Me.Delete_Course_Button.UseVisualStyleBackColor = False
         '
         'Update_Course_Button
@@ -69,7 +69,7 @@ Partial Class Course_Form
         Me.Update_Course_Button.Name = "Update_Course_Button"
         Me.Update_Course_Button.Size = New System.Drawing.Size(163, 57)
         Me.Update_Course_Button.TabIndex = 30
-        Me.Update_Course_Button.Text = "Update Student"
+        Me.Update_Course_Button.Text = "Update Course"
         Me.Update_Course_Button.UseVisualStyleBackColor = False
         '
         'backButton
@@ -89,7 +89,7 @@ Partial Class Course_Form
         Me.Add_Course_Button.Name = "Add_Course_Button"
         Me.Add_Course_Button.Size = New System.Drawing.Size(163, 57)
         Me.Add_Course_Button.TabIndex = 29
-        Me.Add_Course_Button.Text = "Add Student"
+        Me.Add_Course_Button.Text = "Add Course"
         Me.Add_Course_Button.UseVisualStyleBackColor = False
         '
         'Course_Form
