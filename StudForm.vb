@@ -50,7 +50,14 @@ Public Class Student_Form
     End Sub
 
     Private Sub Add_Stud_Button_Click(sender As Object, e As EventArgs) Handles Add_Stud_Button.Click
-        Me.Hide()
         AddStudentForm.Show()
+    End Sub
+
+    Private Sub Update_Stud_Button_Click(sender As Object, e As EventArgs) Handles Update_Stud_Button.Click
+        UpdateStudentForm.Show()
+    End Sub
+
+    Private Sub Delete_Stud_Button_Click(sender As Object, e As EventArgs) Handles Delete_Stud_Button.Click
+        DeleteStudentForm.Show()
     End Sub
 End Class

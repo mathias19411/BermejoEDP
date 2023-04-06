@@ -6,6 +6,7 @@ Public Class Organization_Form
 
     Private Sub loadOrganizationsButton_Click(sender As Object, e As EventArgs) Handles loadOrganizationsButton.Click
         Me.DataGridView4.Rows.Clear()
+        Me.DataGridView4.Columns.Clear()
         DataGridView4.Columns.Add("Column1", "Organization ID")
         DataGridView4.Columns.Add("Column2", "Organization Name")
 
@@ -31,5 +32,17 @@ Public Class Organization_Form
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         mainMenu.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub addOrganizationButton_Click(sender As Object, e As EventArgs) Handles addOrganizationButton.Click
+        AddOrganizationForm.Show()
+    End Sub
+
+    Private Sub updateOrganizationButton_Click(sender As Object, e As EventArgs) Handles updateOrganizationButton.Click
+        UpdateOrganizationForm.Show()
+    End Sub
+
+    Private Sub deleteOrganizationButton_Click(sender As Object, e As EventArgs) Handles deleteOrganizationButton.Click
+        DeleteOrganizationForm.Show()
     End Sub
 End Class

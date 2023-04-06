@@ -26,8 +26,8 @@ Partial Class Club_Form
         Me.backButton = New System.Windows.Forms.Button()
         Me.addClubButton = New System.Windows.Forms.Button()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.updateClubButton = New System.Windows.Forms.Button()
+        Me.deleteClubButton = New System.Windows.Forms.Button()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,33 +72,33 @@ Partial Class Club_Form
         Me.DataGridView3.Size = New System.Drawing.Size(1257, 397)
         Me.DataGridView3.TabIndex = 29
         '
-        'Button1
+        'updateClubButton
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button1.Location = New System.Drawing.Point(181, 472)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(163, 57)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Update Club"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.updateClubButton.BackColor = System.Drawing.SystemColors.Highlight
+        Me.updateClubButton.Location = New System.Drawing.Point(181, 472)
+        Me.updateClubButton.Name = "updateClubButton"
+        Me.updateClubButton.Size = New System.Drawing.Size(163, 57)
+        Me.updateClubButton.TabIndex = 30
+        Me.updateClubButton.Text = "Update Club"
+        Me.updateClubButton.UseVisualStyleBackColor = False
         '
-        'Button2
+        'deleteClubButton
         '
-        Me.Button2.BackColor = System.Drawing.Color.Crimson
-        Me.Button2.Location = New System.Drawing.Point(350, 472)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 57)
-        Me.Button2.TabIndex = 31
-        Me.Button2.Text = "Delete Club"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.deleteClubButton.BackColor = System.Drawing.Color.Crimson
+        Me.deleteClubButton.Location = New System.Drawing.Point(350, 472)
+        Me.deleteClubButton.Name = "deleteClubButton"
+        Me.deleteClubButton.Size = New System.Drawing.Size(163, 57)
+        Me.deleteClubButton.TabIndex = 31
+        Me.deleteClubButton.Text = "Delete Club"
+        Me.deleteClubButton.UseVisualStyleBackColor = False
         '
         'Club_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1281, 541)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.deleteClubButton)
+        Me.Controls.Add(Me.updateClubButton)
         Me.Controls.Add(Me.backButton)
         Me.Controls.Add(Me.addClubButton)
         Me.Controls.Add(Me.loadClubsButton)
@@ -115,6 +115,6 @@ Partial Class Club_Form
     Friend WithEvents backButton As Button
     Friend WithEvents addClubButton As Button
     Friend WithEvents DataGridView3 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents updateClubButton As Button
+    Friend WithEvents deleteClubButton As Button
 End Class

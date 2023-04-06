@@ -1,18 +1,18 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class AddClubForm
-    Private Sub AddClubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+Public Class UpdateClubForm
+    Private Sub UpdateClubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-    Private Sub addClubButton_Click(sender As Object, e As EventArgs) Handles addClubButton.Click
-        Dim strsql As String = "insert into clubs values('" & Me.ClubIDTextBox.Text & "','" & Me.ClubNameTextBox.Text & "','" & Me.ClubPresTextBox.Text & "','" & Me.ClubDescTextBox.Text & "')"
-        MsgBox("Are you sure to ADD this new club to the records?")
+    Private Sub updateClubButton_Click(sender As Object, e As EventArgs) Handles updateClubButton.Click
+        Dim strsql As String = "update clubs set club_name = '" & Me.ClubNameTextBox.Text & "', club_president = " & Me.ClubPresTextBox.Text & ", club_description = '" & Me.ClubDescTextBox.Text & "' where club_ID = " & Me.ClubIDTextBox.Text & " "
+        MsgBox("Are you sure you want to UPDATE the club with ID = " & Me.ClubIDTextBox.Text & "?")
         Connect_to_DB()
         Dim mycmmd As New MySqlCommand
         Try
             mycmmd.Connection = myconn
             mycmmd.CommandText = strsql
             mycmmd.ExecuteNonQuery()
-            MsgBox("Club Successfully Added!", MsgBoxStyle.Information)
+            MsgBox("Club Successfully Updated!", MsgBoxStyle.Information)
             Call Clear_Boxes()
             Me.Hide()
             Club_Form.Show()

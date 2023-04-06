@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddClubForm
+Partial Class UpdateClubForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,7 +27,7 @@ Partial Class AddClubForm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ClubPresTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.addClubButton = New System.Windows.Forms.Button()
+        Me.updateClubButton = New System.Windows.Forms.Button()
         Me.backButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -43,7 +43,7 @@ Partial Class AddClubForm
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.ClubPresTextBox)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.addClubButton)
+        Me.Panel1.Controls.Add(Me.updateClubButton)
         Me.Panel1.Controls.Add(Me.backButton)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -52,7 +52,7 @@ Partial Class AddClubForm
         Me.Panel1.Location = New System.Drawing.Point(0, 1)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(423, 393)
-        Me.Panel1.TabIndex = 17
+        Me.Panel1.TabIndex = 18
         '
         'ClubDescTextBox
         '
@@ -86,15 +86,15 @@ Partial Class AddClubForm
         Me.Label2.TabIndex = 24
         Me.Label2.Text = "Club President"
         '
-        'addClubButton
+        'updateClubButton
         '
-        Me.addClubButton.BackColor = System.Drawing.Color.Lime
-        Me.addClubButton.Location = New System.Drawing.Point(9, 325)
-        Me.addClubButton.Name = "addClubButton"
-        Me.addClubButton.Size = New System.Drawing.Size(198, 57)
-        Me.addClubButton.TabIndex = 23
-        Me.addClubButton.Text = "Add Club"
-        Me.addClubButton.UseVisualStyleBackColor = False
+        Me.updateClubButton.BackColor = System.Drawing.Color.Lime
+        Me.updateClubButton.Location = New System.Drawing.Point(9, 325)
+        Me.updateClubButton.Name = "updateClubButton"
+        Me.updateClubButton.Size = New System.Drawing.Size(198, 57)
+        Me.updateClubButton.TabIndex = 23
+        Me.updateClubButton.Text = "Update Club"
+        Me.updateClubButton.UseVisualStyleBackColor = False
         '
         'backButton
         '
@@ -138,15 +138,15 @@ Partial Class AddClubForm
         Me.ClubNameTextBox.Size = New System.Drawing.Size(402, 22)
         Me.ClubNameTextBox.TabIndex = 18
         '
-        'AddClubForm
+        'UpdateClubForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(423, 395)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "AddClubForm"
+        Me.Name = "UpdateClubForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Add Club Form"
+        Me.Text = "Update Club Form"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -154,14 +154,14 @@ Partial Class AddClubForm
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents ClubIDTextBox As TextBox
-    Friend WithEvents ClubNameTextBox As TextBox
-    Friend WithEvents addClubButton As Button
-    Friend WithEvents backButton As Button
     Friend WithEvents ClubDescTextBox As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ClubPresTextBox As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents updateClubButton As Button
+    Friend WithEvents backButton As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents ClubIDTextBox As TextBox
+    Friend WithEvents ClubNameTextBox As TextBox
 End Class

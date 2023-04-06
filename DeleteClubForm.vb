@@ -1,18 +1,19 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class AddClubForm
-    Private Sub AddClubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+Public Class DeleteClubForm
+    Private Sub DeleteClubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-    Private Sub addClubButton_Click(sender As Object, e As EventArgs) Handles addClubButton.Click
-        Dim strsql As String = "insert into clubs values('" & Me.ClubIDTextBox.Text & "','" & Me.ClubNameTextBox.Text & "','" & Me.ClubPresTextBox.Text & "','" & Me.ClubDescTextBox.Text & "')"
-        MsgBox("Are you sure to ADD this new club to the records?")
+
+    Private Sub Delete_Club_Button_Click(sender As Object, e As EventArgs) Handles Delete_Club_Button.Click
+        Dim strsql As String = "delete from clubs where club_ID = " & Me.ClubIDTextBox.Text & " "
+        MsgBox("Are you sure you want to DELETE the club with ID = " & Me.ClubIDTextBox.Text & "?")
         Connect_to_DB()
         Dim mycmmd As New MySqlCommand
         Try
             mycmmd.Connection = myconn
             mycmmd.CommandText = strsql
             mycmmd.ExecuteNonQuery()
-            MsgBox("Club Successfully Added!", MsgBoxStyle.Information)
+            MsgBox("Club Successfully Deleted!", MsgBoxStyle.Information)
             Call Clear_Boxes()
             Me.Hide()
             Club_Form.Show()
@@ -21,6 +22,7 @@ Public Class AddClubForm
         End Try
         Disconnect_to_DB()
     End Sub
+
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         Call Clear_Boxes()
         Club_Form.Show()
@@ -29,9 +31,6 @@ Public Class AddClubForm
     Private Sub Clear_Boxes()
         With Me
             .ClubIDTextBox.Text = ""
-            .ClubNameTextBox.Text = ""
-            .ClubPresTextBox.Text = ""
-            .ClubDescTextBox.Text = ""
         End With
     End Sub
 End Class

@@ -6,6 +6,7 @@ Public Class Club_Form
 
     Private Sub loadClubsButton_Click(sender As Object, e As EventArgs) Handles loadClubsButton.Click
         Me.DataGridView3.Rows.Clear()
+        Me.DataGridView3.Columns.Clear()
         DataGridView3.Columns.Add("Column1", "Club ID")
         DataGridView3.Columns.Add("Column2", "Club Name")
         DataGridView3.Columns.Add("Column3", "Club President")
@@ -34,12 +35,14 @@ Public Class Club_Form
         Me.Hide()
     End Sub
 
-    Private Sub firstNameTextBox_TextChanged(sender As Object, e As EventArgs)
-
+    Private Sub addClubButton_Click(sender As Object, e As EventArgs) Handles addClubButton.Click
+        AddClubForm.Show()
+    End Sub
+    Private Sub updateClubButton_Click(sender As Object, e As EventArgs) Handles updateClubButton.Click
+        UpdateClubForm.Show()
     End Sub
 
-    Private Sub addClubButton_Click(sender As Object, e As EventArgs) Handles addClubButton.Click
-        Me.Hide()
-        AddClubForm.Show()
+    Private Sub deleteClubButton_Click(sender As Object, e As EventArgs) Handles deleteClubButton.Click
+        DeleteClubForm.Show()
     End Sub
 End Class

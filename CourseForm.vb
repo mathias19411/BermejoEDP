@@ -25,20 +25,11 @@ Public Class Course_Form
         Disconnect_to_DB()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
-
-    End Sub
-
     Private Sub Course_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
     Private Sub Add_Course_Button_Click(sender As Object, e As EventArgs) Handles Add_Course_Button.Click
-        Me.Hide()
         AddCourseForm1.Show()
     End Sub
 
@@ -47,4 +38,11 @@ Public Class Course_Form
         Me.Hide()
     End Sub
 
+    Private Sub Update_Course_Button_Click(sender As Object, e As EventArgs) Handles Update_Course_Button.Click
+        UpdateCourseForm.Show()
+    End Sub
+
+    Private Sub Delete_Course_Button_Click(sender As Object, e As EventArgs) Handles Delete_Course_Button.Click
+        DeleteCourseForm.Show()
+    End Sub
 End Class

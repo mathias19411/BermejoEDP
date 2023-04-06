@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class AddStudentForm
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class UpdateStudentForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class AddStudentForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.backButton = New System.Windows.Forms.Button()
-        Me.Add_Stud_Button = New System.Windows.Forms.Button()
+        Me.Update_Stud_Button = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -45,38 +44,9 @@ Partial Class AddStudentForm
         Me.Stud_IDTextBox3 = New System.Windows.Forms.TextBox()
         Me.LastName_TextBox2 = New System.Windows.Forms.TextBox()
         Me.firstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Panel1.Controls.Add(Me.backButton)
-        Me.Panel1.Controls.Add(Me.Add_Stud_Button)
-        Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.CourseNo_TextBox10)
-        Me.Panel1.Controls.Add(Me.OrgNo_TextBox9)
-        Me.Panel1.Controls.Add(Me.Tuition_TextBox8)
-        Me.Panel1.Controls.Add(Me.ClubNo_TextBox7)
-        Me.Panel1.Controls.Add(Me.Address_TextBox6)
-        Me.Panel1.Controls.Add(Me.Email_TextBox5)
-        Me.Panel1.Controls.Add(Me.Birthday_TextBox4)
-        Me.Panel1.Controls.Add(Me.Stud_IDTextBox3)
-        Me.Panel1.Controls.Add(Me.LastName_TextBox2)
-        Me.Panel1.Controls.Add(Me.firstNameTextBox)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(423, 513)
-        Me.Panel1.TabIndex = 3
         '
         'backButton
         '
@@ -88,15 +58,15 @@ Partial Class AddStudentForm
         Me.backButton.Text = "Back"
         Me.backButton.UseVisualStyleBackColor = False
         '
-        'Add_Stud_Button
+        'Update_Stud_Button
         '
-        Me.Add_Stud_Button.BackColor = System.Drawing.Color.LimeGreen
-        Me.Add_Stud_Button.Location = New System.Drawing.Point(11, 444)
-        Me.Add_Stud_Button.Name = "Add_Stud_Button"
-        Me.Add_Stud_Button.Size = New System.Drawing.Size(198, 57)
-        Me.Add_Stud_Button.TabIndex = 22
-        Me.Add_Stud_Button.Text = "Add Student"
-        Me.Add_Stud_Button.UseVisualStyleBackColor = False
+        Me.Update_Stud_Button.BackColor = System.Drawing.Color.LimeGreen
+        Me.Update_Stud_Button.Location = New System.Drawing.Point(11, 444)
+        Me.Update_Stud_Button.Name = "Update_Stud_Button"
+        Me.Update_Stud_Button.Size = New System.Drawing.Size(198, 57)
+        Me.Update_Stud_Button.TabIndex = 22
+        Me.Update_Stud_Button.Text = "Update Student"
+        Me.Update_Stud_Button.UseVisualStyleBackColor = False
         '
         'Label10
         '
@@ -258,24 +228,53 @@ Partial Class AddStudentForm
         Me.firstNameTextBox.Size = New System.Drawing.Size(398, 22)
         Me.firstNameTextBox.TabIndex = 0
         '
-        'AddStudentForm
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel1.Controls.Add(Me.backButton)
+        Me.Panel1.Controls.Add(Me.Update_Stud_Button)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.CourseNo_TextBox10)
+        Me.Panel1.Controls.Add(Me.OrgNo_TextBox9)
+        Me.Panel1.Controls.Add(Me.Tuition_TextBox8)
+        Me.Panel1.Controls.Add(Me.ClubNo_TextBox7)
+        Me.Panel1.Controls.Add(Me.Address_TextBox6)
+        Me.Panel1.Controls.Add(Me.Email_TextBox5)
+        Me.Panel1.Controls.Add(Me.Birthday_TextBox4)
+        Me.Panel1.Controls.Add(Me.Stud_IDTextBox3)
+        Me.Panel1.Controls.Add(Me.LastName_TextBox2)
+        Me.Panel1.Controls.Add(Me.firstNameTextBox)
+        Me.Panel1.Location = New System.Drawing.Point(1, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(423, 513)
+        Me.Panel1.TabIndex = 2
+        '
+        'UpdateStudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(423, 513)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "AddStudentForm"
+        Me.Name = "UpdateStudentForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Add Student Form"
+        Me.Text = "Update Student Form"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents backButton As Button
-    Friend WithEvents Add_Stud_Button As Button
+    Friend WithEvents Update_Stud_Button As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
@@ -296,4 +295,5 @@ Partial Class AddStudentForm
     Friend WithEvents Stud_IDTextBox3 As TextBox
     Friend WithEvents LastName_TextBox2 As TextBox
     Friend WithEvents firstNameTextBox As TextBox
+    Friend WithEvents Panel1 As Panel
 End Class
