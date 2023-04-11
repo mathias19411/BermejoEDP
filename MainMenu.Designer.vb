@@ -28,6 +28,8 @@ Partial Class mainMenu
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.exitButton = New System.Windows.Forms.Button()
+        Me.BackupButton = New System.Windows.Forms.Button()
+        Me.UploadButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -39,13 +41,14 @@ Partial Class mainMenu
         Me.Label1.Size = New System.Drawing.Size(298, 24)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Welcome to the Main Menu"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button4.Location = New System.Drawing.Point(52, 276)
+        Me.Button4.Location = New System.Drawing.Point(53, 270)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(246, 70)
+        Me.Button4.Size = New System.Drawing.Size(246, 35)
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "Organizations"
         Me.Button4.UseVisualStyleBackColor = False
@@ -53,9 +56,9 @@ Partial Class mainMenu
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button3.Location = New System.Drawing.Point(52, 200)
+        Me.Button3.Location = New System.Drawing.Point(53, 229)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(246, 70)
+        Me.Button3.Size = New System.Drawing.Size(246, 35)
         Me.Button3.TabIndex = 7
         Me.Button3.Text = "Clubs"
         Me.Button3.UseVisualStyleBackColor = False
@@ -63,9 +66,9 @@ Partial Class mainMenu
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button2.Location = New System.Drawing.Point(52, 124)
+        Me.Button2.Location = New System.Drawing.Point(53, 188)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(246, 70)
+        Me.Button2.Size = New System.Drawing.Size(246, 35)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Courses"
         Me.Button2.UseVisualStyleBackColor = False
@@ -73,9 +76,9 @@ Partial Class mainMenu
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button1.Location = New System.Drawing.Point(52, 48)
+        Me.Button1.Location = New System.Drawing.Point(53, 147)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(246, 70)
+        Me.Button1.Size = New System.Drawing.Size(246, 35)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Students"
         Me.Button1.UseVisualStyleBackColor = False
@@ -84,18 +87,40 @@ Partial Class mainMenu
         '
         Me.exitButton.BackColor = System.Drawing.Color.IndianRed
         Me.exitButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.exitButton.Location = New System.Drawing.Point(52, 389)
+        Me.exitButton.Location = New System.Drawing.Point(53, 349)
         Me.exitButton.Name = "exitButton"
         Me.exitButton.Size = New System.Drawing.Size(246, 49)
         Me.exitButton.TabIndex = 10
         Me.exitButton.Text = "Exit"
         Me.exitButton.UseVisualStyleBackColor = False
         '
+        'BackupButton
+        '
+        Me.BackupButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BackupButton.Location = New System.Drawing.Point(53, 106)
+        Me.BackupButton.Name = "BackupButton"
+        Me.BackupButton.Size = New System.Drawing.Size(246, 35)
+        Me.BackupButton.TabIndex = 11
+        Me.BackupButton.Text = "Backup Database"
+        Me.BackupButton.UseVisualStyleBackColor = False
+        '
+        'UploadButton
+        '
+        Me.UploadButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.UploadButton.Location = New System.Drawing.Point(53, 65)
+        Me.UploadButton.Name = "UploadButton"
+        Me.UploadButton.Size = New System.Drawing.Size(246, 35)
+        Me.UploadButton.TabIndex = 12
+        Me.UploadButton.Text = "Upload CSV"
+        Me.UploadButton.UseVisualStyleBackColor = False
+        '
         'mainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(357, 450)
+        Me.Controls.Add(Me.UploadButton)
+        Me.Controls.Add(Me.BackupButton)
         Me.Controls.Add(Me.exitButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)
@@ -116,4 +141,6 @@ Partial Class mainMenu
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents exitButton As Button
+    Friend WithEvents BackupButton As Button
+    Friend WithEvents UploadButton As Button
 End Class

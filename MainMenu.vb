@@ -1,4 +1,6 @@
-﻿Public Class mainMenu
+﻿Imports MySql.Data.MySqlClient
+Imports System.IO
+Public Class mainMenu
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Student_Form.Show()
@@ -27,5 +29,14 @@
 
     Private Sub mainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub UploadButton_Click(sender As Object, e As EventArgs) Handles UploadButton.Click
+        CSVUploadForm1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BackupButton_Click(sender As Object, e As EventArgs) Handles BackupButton.Click
+        Backup_DB()
     End Sub
 End Class
