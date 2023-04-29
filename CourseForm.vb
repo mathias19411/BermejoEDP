@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Microsoft.Office.Interop
 Public Class Course_Form
 
     Private Sub loadCoursesButton_Click(sender As Object, e As EventArgs) Handles loadCoursesButton.Click
@@ -44,5 +45,9 @@ Public Class Course_Form
 
     Private Sub Delete_Course_Button_Click(sender As Object, e As EventArgs) Handles Delete_Course_Button.Click
         DeleteCourseForm.Show()
+    End Sub
+
+    Private Sub ExportExcelButton_Click(sender As Object, e As EventArgs) Handles ExportExcelButton.Click
+        Call importToExcel(Me.DataGridView2, "Course Report.xlsx")
     End Sub
 End Class

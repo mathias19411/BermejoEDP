@@ -28,6 +28,7 @@ Partial Class Student_Form
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Update_Stud_Button = New System.Windows.Forms.Button()
         Me.Delete_Stud_Button = New System.Windows.Forms.Button()
+        Me.ExportExcelButton2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,11 +93,22 @@ Partial Class Student_Form
         Me.Delete_Stud_Button.Text = "Delete Student"
         Me.Delete_Stud_Button.UseVisualStyleBackColor = False
         '
+        'ExportExcelButton2
+        '
+        Me.ExportExcelButton2.BackColor = System.Drawing.Color.LightCoral
+        Me.ExportExcelButton2.Location = New System.Drawing.Point(931, 472)
+        Me.ExportExcelButton2.Name = "ExportExcelButton2"
+        Me.ExportExcelButton2.Size = New System.Drawing.Size(166, 57)
+        Me.ExportExcelButton2.TabIndex = 35
+        Me.ExportExcelButton2.Text = "Export Data to Excel"
+        Me.ExportExcelButton2.UseVisualStyleBackColor = False
+        '
         'Student_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1281, 541)
+        Me.Controls.Add(Me.ExportExcelButton2)
         Me.Controls.Add(Me.Delete_Stud_Button)
         Me.Controls.Add(Me.Update_Stud_Button)
         Me.Controls.Add(Me.backButton)
@@ -116,4 +128,5 @@ Partial Class Student_Form
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Update_Stud_Button As Button
     Friend WithEvents Delete_Stud_Button As Button
+    Friend WithEvents ExportExcelButton2 As Button
 End Class

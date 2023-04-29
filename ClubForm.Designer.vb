@@ -28,6 +28,7 @@ Partial Class Club_Form
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.updateClubButton = New System.Windows.Forms.Button()
         Me.deleteClubButton = New System.Windows.Forms.Button()
+        Me.ExportExcelButton1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,11 +93,22 @@ Partial Class Club_Form
         Me.deleteClubButton.Text = "Delete Club"
         Me.deleteClubButton.UseVisualStyleBackColor = False
         '
+        'ExportExcelButton1
+        '
+        Me.ExportExcelButton1.BackColor = System.Drawing.Color.LightCoral
+        Me.ExportExcelButton1.Location = New System.Drawing.Point(931, 472)
+        Me.ExportExcelButton1.Name = "ExportExcelButton1"
+        Me.ExportExcelButton1.Size = New System.Drawing.Size(166, 57)
+        Me.ExportExcelButton1.TabIndex = 34
+        Me.ExportExcelButton1.Text = "Export Data to Excel"
+        Me.ExportExcelButton1.UseVisualStyleBackColor = False
+        '
         'Club_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1281, 541)
+        Me.Controls.Add(Me.ExportExcelButton1)
         Me.Controls.Add(Me.deleteClubButton)
         Me.Controls.Add(Me.updateClubButton)
         Me.Controls.Add(Me.backButton)
@@ -117,4 +129,5 @@ Partial Class Club_Form
     Friend WithEvents DataGridView3 As DataGridView
     Friend WithEvents updateClubButton As Button
     Friend WithEvents deleteClubButton As Button
+    Friend WithEvents ExportExcelButton1 As Button
 End Class

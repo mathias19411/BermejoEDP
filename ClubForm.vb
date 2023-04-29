@@ -1,4 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Data.Common
+Imports Excel = Microsoft.Office.Interop.Excel
 Public Class Club_Form
     Private Sub ClubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -44,5 +46,9 @@ Public Class Club_Form
 
     Private Sub deleteClubButton_Click(sender As Object, e As EventArgs) Handles deleteClubButton.Click
         DeleteClubForm.Show()
+    End Sub
+
+    Private Sub ExportExcelButton1_Click(sender As Object, e As EventArgs) Handles ExportExcelButton1.Click
+        Call importToExcel(Me.DataGridView3, "Club Report.xlsx")
     End Sub
 End Class

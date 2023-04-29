@@ -28,6 +28,7 @@ Partial Class Organization_Form
         Me.backButton = New System.Windows.Forms.Button()
         Me.updateOrganizationButton = New System.Windows.Forms.Button()
         Me.deleteOrganizationButton = New System.Windows.Forms.Button()
+        Me.ExportExcelButton3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,11 +93,22 @@ Partial Class Organization_Form
         Me.deleteOrganizationButton.Text = "Delete Organization"
         Me.deleteOrganizationButton.UseVisualStyleBackColor = False
         '
+        'ExportExcelButton3
+        '
+        Me.ExportExcelButton3.BackColor = System.Drawing.Color.LightCoral
+        Me.ExportExcelButton3.Location = New System.Drawing.Point(931, 472)
+        Me.ExportExcelButton3.Name = "ExportExcelButton3"
+        Me.ExportExcelButton3.Size = New System.Drawing.Size(166, 57)
+        Me.ExportExcelButton3.TabIndex = 36
+        Me.ExportExcelButton3.Text = "Export Data to Excel"
+        Me.ExportExcelButton3.UseVisualStyleBackColor = False
+        '
         'Organization_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1281, 541)
+        Me.Controls.Add(Me.ExportExcelButton3)
         Me.Controls.Add(Me.deleteOrganizationButton)
         Me.Controls.Add(Me.updateOrganizationButton)
         Me.Controls.Add(Me.addOrganizationButton)
@@ -118,4 +130,5 @@ Partial Class Organization_Form
     Friend WithEvents backButton As Button
     Friend WithEvents updateOrganizationButton As Button
     Friend WithEvents deleteOrganizationButton As Button
+    Friend WithEvents ExportExcelButton3 As Button
 End Class

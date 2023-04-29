@@ -1,9 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Microsoft.office.interop
 Module Module1
     Public myconn As New MySql.Data.MySqlClient.MySqlConnection
     Public myConnectionString As String
     Public strSQL As String
-
+    Public currentDate As DateTime = DateTime.Now
     Public Sub Connect_to_DB()
         myConnectionString = "server=127.0.0.1;" _
                     & "uid=root;" _
@@ -54,5 +55,62 @@ Module Module1
             Return
         End If
 
+    End Sub
+
+    Public Sub importToExcel(ByVal mydg As DataGridView, ByVal templatefilename As String)
+        Dim xlsApp As Excel.Application
+        Dim xlsWorkBook As Excel.Workbook
+        Dim xlsSheet As Excel.Worksheet
+        Dim misValue As Object = System.Reflection.Missing.Value
+        Dim x As Integer
+        Dim y As Integer
+
+        xlsApp = New Excel.Application
+        xlsWorkBook = xlsApp.Workbooks.Add(misValue)
+        xlsSheet = xlsWorkBook.Sheets("sheet1")
+
+        For x = 0 To mydg.RowCount - 2
+            For y = 0 To mydg.ColumnCount - 1
+                xlsSheet.Cells(x + 1, y + 1) = mydg(y, x).Value.ToString()
+            Next
+        Next
+        xlsSheet.SaveAs("C:\Users\pio\source\repos\BermejoEDP\Excel Reports\" & templatefilename & " " & currentDate.ToString("mm-dd-yy hh-mm-ss") & ".xlsx")
+        xlsWorkBook.Close()
+        xlsApp.Quit()
+
+        releaseObject(xlsApp)
+        releaseObject(xlsWorkBook)
+        releaseObject(xlsSheet)
+        MessageBox.Show("Excel File successfully save to C:\Users\pio\source\repos\BermejoEDP\Excel Reports")
+    End Sub
+    'Public Function convertToLetters(ByVal number As Integer) As String
+    'number -= 1
+    'Dim result As String = String.Empty
+
+    'If (26 > number) Then
+    'result = Chr(number + 65)
+    'Else
+    'mn As Integer
+
+    'Do
+    'column = number Mod 26
+    'number = (number \ 26) - 1
+    'result = Chr(column + 65) + result
+    'Loop Until (number < 0)
+    'End If
+
+    'Return result
+
+    'End Function
+
+    Public Sub releaseObject(ByVal obj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
+            obj = Nothing
+        Catch ex As Exception
+            obj = Nothing
+        Finally
+            GC.Collect()
+        End Try
     End Sub
 End Module

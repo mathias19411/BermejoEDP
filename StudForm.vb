@@ -1,4 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Data.Common
+Imports Excel = Microsoft.Office.Interop.Excel
 Public Class Student_Form
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
@@ -59,5 +61,9 @@ Public Class Student_Form
 
     Private Sub Delete_Stud_Button_Click(sender As Object, e As EventArgs) Handles Delete_Stud_Button.Click
         DeleteStudentForm.Show()
+    End Sub
+
+    Private Sub ExportExcelButton2_Click(sender As Object, e As EventArgs) Handles ExportExcelButton2.Click
+        Call importToExcel(Me.DataGridView1, "Student Report.xlsx")
     End Sub
 End Class

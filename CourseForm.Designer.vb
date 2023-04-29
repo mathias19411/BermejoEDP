@@ -28,6 +28,8 @@ Partial Class Course_Form
         Me.Update_Course_Button = New System.Windows.Forms.Button()
         Me.backButton = New System.Windows.Forms.Button()
         Me.Add_Course_Button = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ExportExcelButton = New System.Windows.Forms.Button()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,11 +94,32 @@ Partial Class Course_Form
         Me.Add_Course_Button.Text = "Add Course"
         Me.Add_Course_Button.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(931, 472)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(0, 0)
+        Me.Button1.TabIndex = 32
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ExportExcelButton
+        '
+        Me.ExportExcelButton.BackColor = System.Drawing.Color.LightCoral
+        Me.ExportExcelButton.Location = New System.Drawing.Point(931, 472)
+        Me.ExportExcelButton.Name = "ExportExcelButton"
+        Me.ExportExcelButton.Size = New System.Drawing.Size(166, 57)
+        Me.ExportExcelButton.TabIndex = 33
+        Me.ExportExcelButton.Text = "Export Data to Excel"
+        Me.ExportExcelButton.UseVisualStyleBackColor = False
+        '
         'Course_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1281, 541)
+        Me.Controls.Add(Me.ExportExcelButton)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Delete_Course_Button)
         Me.Controls.Add(Me.Update_Course_Button)
         Me.Controls.Add(Me.backButton)
@@ -116,4 +139,6 @@ Partial Class Course_Form
     Friend WithEvents Update_Course_Button As Button
     Friend WithEvents backButton As Button
     Friend WithEvents Add_Course_Button As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ExportExcelButton As Button
 End Class
