@@ -74,14 +74,14 @@ Module Module1
                 xlsSheet.Cells(x + 1, y + 1) = mydg(y, x).Value.ToString()
             Next
         Next
-        xlsSheet.SaveAs("C:\Users\pio\source\repos\BermejoEDP\Excel Reports\" & templatefilename & " " & currentDate.ToString("mm-dd-yy hh-mm-ss") & ".xlsx")
+        xlsSheet.SaveAs("C:\Users\pio\Documents\" & templatefilename & " " & currentDate.ToString("mm-dd-yy hh-mm-ss") & ".xlsx")
         xlsWorkBook.Close()
         xlsApp.Quit()
 
         releaseObject(xlsApp)
         releaseObject(xlsWorkBook)
         releaseObject(xlsSheet)
-        MessageBox.Show("Excel File successfully save to C:\Users\pio\source\repos\BermejoEDP\Excel Reports")
+        MessageBox.Show("Excel File successfully save to This PC\Documents")
     End Sub
     'Public Function convertToLetters(ByVal number As Integer) As String
     'number -= 1
