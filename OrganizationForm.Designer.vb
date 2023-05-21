@@ -22,6 +22,7 @@ Partial Class Organization_Form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Organization_Form))
         Me.loadOrganizationsButton = New System.Windows.Forms.Button()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.addOrganizationButton = New System.Windows.Forms.Button()
@@ -115,6 +116,7 @@ Partial Class Organization_Form
         Me.Controls.Add(Me.backButton)
         Me.Controls.Add(Me.loadOrganizationsButton)
         Me.Controls.Add(Me.DataGridView4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Organization_Form"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -64,6 +64,18 @@ Public Class Student_Form
     End Sub
 
     Private Sub ExportExcelButton2_Click(sender As Object, e As EventArgs) Handles ExportExcelButton2.Click
-        Call importToExcel(Me.DataGridView1, "Student Report.xlsx")
+        Dim saveFileDialog As New SaveFileDialog()
+
+        saveFileDialog.DefaultExt = ".xlsx"
+        saveFileDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx"
+
+        Dim result As DialogResult = saveFileDialog.ShowDialog()
+
+        If result = DialogResult.OK Then
+            ' Retrieve the selected file path
+            Dim filePath As String = saveFileDialog.FileName
+            'Call importToExcel(Me.DataGridView2, "Course Report.xlsx")
+            Call ExportToExcel(Me.DataGridView1, filePath)
+        End If
     End Sub
 End Class

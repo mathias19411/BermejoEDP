@@ -22,12 +22,13 @@ Partial Class DeleteClubForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeleteClubForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ClubIDTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.backButton = New System.Windows.Forms.Button()
         Me.Delete_Club_Button = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ClubIDTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,6 +44,22 @@ Partial Class DeleteClubForm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(423, 182)
         Me.Panel1.TabIndex = 4
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 42)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(53, 17)
+        Me.Label2.TabIndex = 26
+        Me.Label2.Text = "Club ID"
+        '
+        'ClubIDTextBox
+        '
+        Me.ClubIDTextBox.Location = New System.Drawing.Point(9, 62)
+        Me.ClubIDTextBox.Name = "ClubIDTextBox"
+        Me.ClubIDTextBox.Size = New System.Drawing.Size(402, 22)
+        Me.ClubIDTextBox.TabIndex = 25
         '
         'Label1
         '
@@ -73,28 +90,13 @@ Partial Class DeleteClubForm
         Me.Delete_Club_Button.Text = "Delete Club"
         Me.Delete_Club_Button.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 42)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 17)
-        Me.Label2.TabIndex = 26
-        Me.Label2.Text = "Club ID"
-        '
-        'ClubIDTextBox
-        '
-        Me.ClubIDTextBox.Location = New System.Drawing.Point(9, 62)
-        Me.ClubIDTextBox.Name = "ClubIDTextBox"
-        Me.ClubIDTextBox.Size = New System.Drawing.Size(402, 22)
-        Me.ClubIDTextBox.TabIndex = 25
-        '
         'DeleteClubForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(423, 184)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DeleteClubForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Delete Club Form"

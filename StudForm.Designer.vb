@@ -22,6 +22,7 @@ Partial Class Student_Form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Student_Form))
         Me.Add_Stud_Button = New System.Windows.Forms.Button()
         Me.backButton = New System.Windows.Forms.Button()
         Me.loadStudentsButton = New System.Windows.Forms.Button()
@@ -115,6 +116,7 @@ Partial Class Student_Form
         Me.Controls.Add(Me.Add_Stud_Button)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.loadStudentsButton)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Student_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Student Form"

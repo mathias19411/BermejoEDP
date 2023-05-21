@@ -22,6 +22,7 @@ Partial Class Club_Form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Club_Form))
         Me.loadClubsButton = New System.Windows.Forms.Button()
         Me.backButton = New System.Windows.Forms.Button()
         Me.addClubButton = New System.Windows.Forms.Button()
@@ -115,6 +116,7 @@ Partial Class Club_Form
         Me.Controls.Add(Me.addClubButton)
         Me.Controls.Add(Me.loadClubsButton)
         Me.Controls.Add(Me.DataGridView3)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Club_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Club Form"

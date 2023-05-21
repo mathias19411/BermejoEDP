@@ -22,6 +22,7 @@ Partial Class Course_Form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Course_Form))
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.loadCoursesButton = New System.Windows.Forms.Button()
         Me.Delete_Course_Button = New System.Windows.Forms.Button()
@@ -126,6 +127,7 @@ Partial Class Course_Form
         Me.Controls.Add(Me.Add_Course_Button)
         Me.Controls.Add(Me.loadCoursesButton)
         Me.Controls.Add(Me.DataGridView2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Course_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Course Form"

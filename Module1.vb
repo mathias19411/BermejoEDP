@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports Microsoft.office.interop
+Imports Microsoft.Office.Interop
+Imports System.Windows.Forms
+Imports OfficeOpenXml
 Module Module1
     Public myconn As New MySql.Data.MySqlClient.MySqlConnection
     Public myConnectionString As String
@@ -57,32 +59,52 @@ Module Module1
 
     End Sub
 
-    Public Sub importToExcel(ByVal mydg As DataGridView, ByVal templatefilename As String)
-        Dim xlsApp As Excel.Application
-        Dim xlsWorkBook As Excel.Workbook
-        Dim xlsSheet As Excel.Worksheet
-        Dim misValue As Object = System.Reflection.Missing.Value
-        Dim x As Integer
-        Dim y As Integer
+    Public Sub ExportToExcel(ByVal mydg As DataGridView, ByVal templatefilename As String)
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial
+        Dim package As New ExcelPackage()
 
-        xlsApp = New Excel.Application
-        xlsWorkBook = xlsApp.Workbooks.Add(misValue)
-        xlsSheet = xlsWorkBook.Sheets("sheet1")
+        Dim worksheet As ExcelWorksheet = package.Workbook.Worksheets.Add("Sheet1")
 
-        For x = 0 To mydg.RowCount - 2
-            For y = 0 To mydg.ColumnCount - 1
-                xlsSheet.Cells(x + 1, y + 1) = mydg(y, x).Value.ToString()
+        For i As Integer = 0 To mydg.Columns.Count - 1
+            worksheet.Cells(1, i + 1).Value = mydg.Columns(i).HeaderText
+        Next
+
+        For i As Integer = 0 To mydg.Rows.Count - 1
+            For j As Integer = 0 To mydg.Columns.Count - 1
+                worksheet.Cells(i + 2, j + 1).Value = mydg.Rows(i).Cells(j).Value
             Next
         Next
-        xlsSheet.SaveAs("C:\Users\pio\Documents\" & templatefilename & " " & currentDate.ToString("mm-dd-yy hh-mm-ss") & ".xlsx")
-        xlsWorkBook.Close()
-        xlsApp.Quit()
 
-        releaseObject(xlsApp)
-        releaseObject(xlsWorkBook)
-        releaseObject(xlsSheet)
-        MessageBox.Show("Excel File successfully save to This PC\Documents")
+        package.SaveAs(New IO.FileInfo(templatefilename))
+        MessageBox.Show("Data exported to Excel successfully.", "Export to Excel", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+    'Public Sub importToExcel(ByVal mydg As DataGridView, ByVal templatefilename As String)
+    'Dim xlsApp As Excel.Application
+    'Dim xlsWorkBook As Excel.Workbook
+    'Dim xlsSheet As Excel.Worksheet
+    'Dim misValue As Object = System.Reflection.Missing.Value
+    'Dim x As Integer
+    'Dim y As Integer
+
+    'xlsApp = New Excel.Application
+    'xlsWorkBook = xlsApp.Workbooks.Add(misValue)
+    'xlsSheet = xlsWorkBook.Sheets("sheet1")
+
+    'For x = 0 To mydg.RowCount - 2
+    'For y = 0 To mydg.ColumnCount - 1
+    'xlsSheet.Cells(x + 1, y + 1) = mydg(y, x).Value.ToString()
+    'Next
+    'Next
+    'xlsSheet.SaveAs("C:\Users\pio\Documents\" & templatefilename & " " & currentDate.ToString("mm-dd-yy hh-mm-ss") & ".xlsx")
+    'xlsWorkBook.Close()
+    'xlsApp.Quit()
+
+    'releaseObject(xlsApp)
+    'releaseObject(xlsWorkBook)
+    'releaseObject(xlsSheet)
+    'MessageBox.Show("Excel File successfully save to This PC\Documents")
+    'End Sub
+    '
     'Public Function convertToLetters(ByVal number As Integer) As String
     'number -= 1
     'Dim result As String = String.Empty
