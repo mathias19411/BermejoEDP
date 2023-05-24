@@ -92,7 +92,7 @@ Partial Class mainMenu
         Me.exitButton.Name = "exitButton"
         Me.exitButton.Size = New System.Drawing.Size(246, 49)
         Me.exitButton.TabIndex = 10
-        Me.exitButton.Text = "Exit"
+        Me.exitButton.Text = "Logout"
         Me.exitButton.UseVisualStyleBackColor = False
         '
         'BackupButton

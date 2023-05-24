@@ -31,6 +31,7 @@ Public Class LoginForm1
                 MessageBox.Show("Invalid username or password")
             End If
             Call Disconnect_to_DB()
+            Call Clear_Boxes()
         End With
     End Sub
 
@@ -50,5 +51,11 @@ Public Class LoginForm1
     Private Sub RegisterButton1_Click(sender As Object, e As EventArgs) Handles RegisterButton1.Click
         Me.Hide()
         SignUpForm.Show()
+    End Sub
+    Private Sub Clear_Boxes()
+        With Me
+            .UsernameTextBox.Text = ""
+            .PasswordTextBox.Text = ""
+        End With
     End Sub
 End Class
